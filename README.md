@@ -41,13 +41,10 @@ cd armor_mvp
 - 离线运行结果视频（叠加可视化）：[armor_mvp/out.mp4](armor_mvp/out.mp4)
 - 逐帧结构化输出（JSONL）：[armor_mvp/results.jsonl](armor_mvp/results.jsonl)
 
-> 说明：`blue.mp4` 并非装甲板素材，检测结果为空属预期；若提供包含装甲板的样例视频，可直接复现框与角点输出。
-
 ## 参数说明
 
 - 参数项与默认值与 要求 中“参数配置”保持一致（`bin.* / morph.ksize / filter.* / detector.max_candidates / tracker.* / ui.*`）。
 - 数据结构：每个轨迹包含 `id/score/bbox(TLWH)/corners[TL,TR,BR,BL]`；帧级包含 `fps`。
-- 可扩展：如需 ROS2 版本（`armor_vision` 包），可在此基础上封装为节点并发布两个话题（detections/debug_image）。
 
 ## ROS2（Humble）构建与运行
 
