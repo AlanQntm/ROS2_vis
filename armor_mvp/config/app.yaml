@@ -1,0 +1,36 @@
+
+%YAML:1.0
+
+input:
+  device_id: 0
+  video: "../blue.mp4"            # relative to armor_mvp/
+  width: 1280
+  height: 720
+  fps: 60
+
+bin:
+  method: "adaptive"   # adaptive | otsu | auto
+  block_size: 21
+  C: 5
+
+morph:
+  ksize: 3
+
+filter:
+  ratio_min: 2.0
+  ratio_max: 3.2
+  area_min_px: 800
+  rectangularity_min: 0.75
+
+detector:
+  max_candidates: 6
+
+tracker:
+  iou_thresh: 0.2
+  max_missed: 8
+  smooth_alpha: 0.25
+
+ui:
+  show_fps: 1
+  window: ""
+  save_video: "out.mp4"        # e.g. out.mp4
